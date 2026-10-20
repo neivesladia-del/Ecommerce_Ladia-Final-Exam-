@@ -1,0 +1,228 @@
+/* ==================================================
+   BREW CULTURE — FINAL FIXED VERSION
+================================================== */
+
+/* === BASE & BODY — BACKGROUND IMAGE === */
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  color: #2b2b2b;
+  background: 
+    linear-gradient(rgba(255, 253, 249, 0.85), rgba(249, 242, 235, 0.9)),
+    url('../Images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background: linear-gradient(90deg, #146c43 0%, #198754 50%, #1e7e4c 100%) !important;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+  padding: 0.75rem 0;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.navbar-brand img {
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.25));
+}
+.nav-link {
+  font-weight: 500;
+  transition: all 0.25s ease;
+  border-radius: 6px;
+  margin: 0 0.25rem;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #ffd89b !important;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.form-control {
+  border-radius: 20px 0 0 20px;
+  border: none;
+}
+.btn-outline-light {
+  border-radius: 0 20px 20px 0;
+  border: none;
+}
+.btn-outline-light:hover {
+  background-color: #146c43;
+  border-color: #146c43;
+}
+
+/* === BANNER / CAROUSEL === */
+.carousel-item img {
+  height: 450px;
+  object-fit: cover;
+  width: 100%;
+}
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  border: none;
+}
+.carousel-indicators button.active {
+  background-color: #198754;
+  opacity: 1;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(25, 135, 84, 0.45);
+  border-radius: 50%;
+  padding: 14px;
+  transition: background-color 0.2s ease;
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(25, 135, 84, 0.8);
+}
+
+/* === SECTION GENERAL === */
+section {
+  padding: 60px 0;
+}
+section h2 {
+  font-weight: 700;
+  color: #3c2a21;
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2.5rem !important;
+}
+section h2:after {
+  content: '';
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #198754, #146c43);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+/* === TOP 10 PRODUCTS — EQUAL IMAGES & CARDS === */
+.product-grid .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.product-grid .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 0.75rem;
+}
+.product-grid .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.product-grid .card-body .btn {
+  margin-top: auto;
+  background-color: #198754;
+  border-color: #198754;
+}
+.product-grid .card-body .btn:hover {
+  background-color: #146c43;
+  border-color: #146c43;
+}
+
+/* === TESTIMONIALS === */
+.bg-light {
+  background: linear-gradient(135deg, rgba(248, 240, 230, 0.92), rgba(243, 229, 213, 0.92)) !important;
+  backdrop-filter: blur(4px);
+}
+.bg-light .card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+.bg-light .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(60, 42, 33, 0.12) !important;
+}
+.text-warning {
+  font-size: 1.2rem;
+}
+
+/* === GALLERY — EQUAL IMAGE SIZES === */
+section.py-5:nth-of-type(3) {
+  background: linear-gradient(180deg, rgba(197, 137, 99, 0.2), rgba(150, 101, 75, 0.2));
+  backdrop-filter: blur(4px);
+}
+.row.g-3 img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.row.g-3 img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(60, 42, 33, 0.15);
+}
+
+/* === FOOTER === */
+footer {
+  background: linear-gradient(180deg, #2b1d15 0%, #1a110d 100%) !important;
+  margin-top: 0;
+  border-top: 3px solid #198754;
+}
+footer p {
+  margin-bottom: 0.5rem;
+}
+footer a {
+  transition: color 0.25s ease;
+}
+footer a:hover {
+  color: #c58963 !important;
+  text-decoration: underline !important;
+}
+
+/* === RESPONSIVE / MOBILE === */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 300px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+  .row.g-3 img {
+    height: 150px;
+  }
+  section {
+    padding: 50px 0;
+  }
+  .navbar {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 220px;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .row.g-3 img {
+    height: 140px;
+  }
+  section {
+    padding: 40px 0;
+  }
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
